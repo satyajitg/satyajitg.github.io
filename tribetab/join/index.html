@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Join a group — TribeTab</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #2b2f26;
+    background: #fffcf5;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 1.8rem; margin-bottom: 4px; }
+  .updated { color: #6b6f63; font-size: 0.9rem; margin-top: 0; margin-bottom: 32px; }
+  h2 { font-size: 1.2rem; color: #566342; margin-top: 36px; }
+  a { color: #566342; }
+  nav.back { margin-top: 48px; }
+  nav.back a { font-weight: 600; text-decoration: none; }
+  nav.back a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>You've been invited to a TribeTab group</h1>
+    <p>If TribeTab is installed, this link opens it and joins you to the group. If you are
+      seeing this page instead:</p>
+    <ol>
+      <li>Install TribeTab and sign in.</li>
+      <li>Open <strong>Groups → Join with an invite</strong>.</li>
+      <li>Paste this invite code:</li>
+    </ol>
+    <p><code id="token" style="font-size:1.1rem;word-break:break-all">(no code in this link)</code></p>
+    <p class="updated">The code works once and expires 7 days after it was created.</p>
+    <script>
+      // The code travels in the URL fragment, which the browser never sends to any server.
+      var t = decodeURIComponent((location.hash || "").slice(1));
+      if (t) document.getElementById("token").textContent = t;
+    </script>
+    <nav class="back"><a href="../../index.html">&larr; About TribeTab</a></nav>
+  </div>
+</body>
+</html>
