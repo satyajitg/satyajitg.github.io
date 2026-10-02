@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.tribetab.app",
+      "sha256_cert_fingerprints": [
+        "1E:ED:F6:B7:6A:68:66:D3:06:FF:3D:02:84:90:ED:FF:04:81:D6:2E:B9:AB:79:2E:B0:C6:2D:25:2E:8C:37:6C",
+        "78:3D:A2:96:EB:30:02:ED:14:26:53:58:70:58:F9:F8:58:12:23:5A:F2:7C:6D:6A:EE:07:92:8B:78:C2:62:03"
+      ]
+    }
+  }
+]
